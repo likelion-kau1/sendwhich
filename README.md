@@ -1,24 +1,16 @@
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+## 샌드위치 (sendwhich)
 
+간단 파일 전송 서비스
 
-Welcome to your Rails project on Cloud9 IDE!
+* 해당 프로젝트는 railsFTW에서도 원활히 작동할 수 있도록 조치하였습니다.
+* 다음 절차를 통하여 사용 가능합니다.
+1. bash창에 bundle update coffee-script-source 입력
+2. bash창에 bundle install 입력
 
-To get started, just do the following:
+## 추가로 구현해야 할 요소
 
-1. Run the project with the "Run Project" button in the menu bar on top of the IDE.
-2. Preview your new app by clicking on the URL that appears in the Run panel below (https://uploadingfile-today1028.c9users.io/).
+현재 파일을 입력받아 carrierwave를 통해 AWS S3 서버에 올리고, 해당 다운로드 경로를 post 모델의 file_path라는 변수명으로 저장하도록 하였습니다. 이제 submit 버튼을 누름으로써 이 링크를 표시하는 새로운 창으로 리디렉션 시키면 됩니다.
 
-Happy coding!
-The Cloud9 IDE team
+링크를 표시하는 페이지에는 해당 파일의 이름, 다운로드 경로, 유효시간 (생성시간 포함), 그리고 추가적으로 카카오톡 api를 적용시켜 사용자의 카카오톡으로 해당 경로를 전송하는 기능까지 구현하면 좋을 것 같습니다.
 
-
-## Support & Documentation
-
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
