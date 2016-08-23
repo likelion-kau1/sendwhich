@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   post 'home/index'
   post 'home/upload'
+  get '/:downloadcode' => 'home#download', as: 'download'
+  get 'home/index'
+  resources :download
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

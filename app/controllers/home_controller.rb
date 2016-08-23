@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
     def index
+
     end
 
     def upload
@@ -15,5 +16,10 @@ class HomeController < ApplicationController
       else
         render :text => post.errors.messages
       end
+    end
+
+    def download
+      @link = params[:downloadcode]
+      @posts = Post.find(1)
     end
 end

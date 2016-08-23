@@ -80,41 +80,17 @@
                         <div class="row">
 
                             <h1 data-animate="fadeInDown">Welcome to SEND WHICH!</h1>
-                            <p  class="message" data-animate="fadeInUp">Please Upload Your File</p>
+                            <p  class="message" data-animate="fadeInUp">Here's Your Download Link Below : <%= @link %></p>
 
 
-                            <div class="col-md-6 col-md-offset-3" data-animate="fadeInUp">
-                                 <form method="POST" enctype="multipart/form-data" action="/home/upload" class="form" >
-                                    <div class="input-group">
-                                        <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                                            <div style="width:400px" class="form-control" data-trigger="fileinput">
-                                               <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                                               <span class="fileinput-filename"></span>
-                                            </div>
-                                            <span class="input-group-addon btn btn-default btn-file">
-                                              <!-- 파일이 선택되지 않았을 때의 클래스 적용 -->
-                                                <span class="fileinput-new">Select file</span>
-                                                <!-- 파일이 선택되었을 때의 클래스 적용 : 새로운 파일 업로드 -->
-                                                <span class="fileinput-exists">Change</span>
-                                                <input type="file" name="sendfile">
-                                            </span>
-                                            <!-- 파일이 선택되었을 때의 클래스 적용 : 새로고침으로 기존의 데이터 삭제함 -->
-                                          <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
-                                        </div>
-                                        <form method="GET" action="/home/download" class="form" >
-                                          <input class="form-control" type="text" name="downloadcode" placeholder="도메인 뒤의 문자열을 입력하세요" required="required">
-                                        </form>
-                                        <p class="text-small">Don't submit private files!</p><br>
-                                          <a href="/:downloadcode">
-                                            <button type="submit" class="btn btn-labeled btn-success">
-                                              <span class="btn-label">
-                                                <i class="glyphicon glyphicon-ok"></i>
-                                              </span>SUBMIT
-                                            </button>
-                                          </a>
-                                  </form>
-                              </div>
-                                    <!-- /input-group -->
+                            <div class="col-md-6 col-md-offset-3">
+                              <a href="<%= @posts.file_path %>">
+                                <button type="button" class="btn btn-labeled btn-success">
+                                  <span class="btn-label">
+                                    <i class="glyphicon glyphicon-ok"></i>
+                                  </span>Download
+                                </button>
+                              </a>
                             </div>
 
                         </div>
