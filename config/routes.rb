@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   post 'home/index'
   post 'home/upload'
-  get '/:downloadcode' => 'home#download', as: 'download'
+  get '/download' => 'home#download', as: 'download'
   get 'home/index'
   resources :download
 

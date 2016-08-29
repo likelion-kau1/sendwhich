@@ -79,20 +79,19 @@
                     <div class="container">
                         <div class="row">
 
-                            <h1 data-animate="fadeInDown">Welcome to SEND WHICH!</h1>
-                            <p  class="message" data-animate="fadeInUp">Here's Your Download Link Below : <%= @link %></p>
-
-
-                            <div class="col-md-6 col-md-offset-3">
-                              <a href="<%= @posts.file_path %>">
-                                <button type="button" class="btn btn-labeled btn-success">
-                                  <span class="btn-label">
-                                    <i class="glyphicon glyphicon-ok"></i>
-                                  </span>Download
-                                </button>
-                              </a>
-                            </div>
-
+                            <h1 data-animate="fadeInDown">SENDWHICH!</h1>
+                            <form method="POST" action="/home/download" class="form" >
+                              <input class="form-control" type="text" name="outputcode" placeholder="미리 지정한 문자열을 입력하세요" required="required">
+                              <div class="col-md-6 col-md-offset-3">
+                                  <a href="<%= @posts.file_path %>">
+                                    <button type="button" class="btn btn-labeled btn-success">
+                                      <span class="btn-label">
+                                        <i class="glyphicon glyphicon-ok"></i>
+                                      </span>Download
+                                    </button>
+                                  </a>
+                              </div>
+                            </form>
                         </div>
                     </div>
                 </div>

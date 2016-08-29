@@ -79,8 +79,8 @@
                     <div class="container">
                         <div class="row">
 
-                            <h1 data-animate="fadeInDown">Welcome to SEND WHICH!</h1>
-                            <p  class="message" data-animate="fadeInUp">Please Upload Your File</p>
+                            <h1 data-animate="fadeInDown">SENDWHICH</h1>
+                            <p  class="message" data-animate="fadeInUp">파일을 업로드해주세요</p>
 
 
                             <div class="col-md-6 col-md-offset-3" data-animate="fadeInUp">
@@ -101,17 +101,15 @@
                                             <!-- 파일이 선택되었을 때의 클래스 적용 : 새로고침으로 기존의 데이터 삭제함 -->
                                           <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
                                         </div>
-                                        <form method="GET" action="/home/download" class="form" >
-                                          <input class="form-control" type="text" name="downloadcode" placeholder="도메인 뒤의 문자열을 입력하세요" required="required">
-                                        </form>
+                                          <input class="form-control" type="text" name="inputcode" placeholder="도메인 뒤의 문자열을 입력하세요" required="required">
                                         <p class="text-small">Don't submit private files!</p><br>
-                                          <a href="/:downloadcode">
+
                                             <button type="submit" class="btn btn-labeled btn-success">
                                               <span class="btn-label">
                                                 <i class="glyphicon glyphicon-ok"></i>
                                               </span>SUBMIT
                                             </button>
-                                          </a>
+                                          <a href="/:downloadcode"></a>
                                   </form>
                               </div>
                                     <!-- /input-group -->

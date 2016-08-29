@@ -57,8 +57,10 @@ GEM
     concurrent-ruby (1.0.2)
     debug_inspector (0.0.2)
     erubis (2.7.0)
-    excon (0.51.0)
+    excon (0.52.0)
     execjs (2.7.0)
+    figaro (1.1.1)
+      thor (~> 0.14)
     fog-aws (0.11.0)
       fog-core (~> 1.38)
       fog-json (~> 1.0)
@@ -180,6 +182,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.1.0)
   coffee-script-source (= 1.8.0)
+  figaro
   fog-aws
   jbuilder (~> 2.0)
   jquery-rails

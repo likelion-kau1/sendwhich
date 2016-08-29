@@ -16,10 +16,13 @@ class HomeController < ApplicationController
       else
         render :text => post.errors.messages
       end
+      post.downloadcode = params[:downloadcode]
+      @posts = Post.last
     end
 
     def download
       @link = params[:downloadcode]
-      @posts = Post.find(1)
+      @posts = Post.last
     end
+
 end
